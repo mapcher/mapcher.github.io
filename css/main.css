@@ -1,0 +1,226 @@
+﻿
+.metrica{
+	position:absolute;
+	bottom:0px;
+}
+.horizontal{	
+	height:25px;
+	width:25px;
+}
+.vertical{	
+	height:25px;
+	width:25px;
+}
+.ru{	
+	height:25px;
+	width:25px;
+}
+.en{	
+	height:25px;
+	width:25px;
+}
+.window{
+	position:fixed;
+	top:0px;	
+	left:0px;
+	height:100%;
+	width:100%;
+}
+.menu{	
+	position:fixed;
+	height:100%;
+	left:-200px;
+	width:200px;
+	top:0px;
+	color:white;	
+	background-color:black;
+}
+.menuItem{
+	position:relative;
+	width:100%;
+}
+.menuOption{
+	position:relative;
+	cursor: pointer;
+}
+.maps{
+	position:absolute;
+	width:100%;
+	top:60px;
+	bottom:0px;
+}
+.footer{
+	position:absolute;
+	height:60px;
+	left:0px;
+	width:100%;	
+	top:0px;	
+}
+.header{
+	position:absolute;
+	height:60px;
+	left:0px;
+	width:100%;	
+	top:0px;
+}
+.logo{
+	position:absolute;
+	left:0px;
+	height:60px;
+	width:320px;
+	//background-color:red;
+}
+.banners{
+	position:absolute;
+	left:320px;
+	right:0px;
+	height:60px;
+	overflow:hidden;
+}
+.banner1{
+	position:absolute;
+	right:0px;
+	width:468px;
+	height:60px;
+}
+.banner2{
+	position:absolute;
+	right:468px;
+	left:0px;
+	height:60px;
+}
+.shares{
+	position:absolute;
+	height:60px;
+	width:130px;
+	bottom:0px;
+	right:0px;
+	//background-color:yellow;
+}
+.ya_share{
+	left:0px;
+	position:absolute;
+	height:30px;
+//	width:140px;
+//	background-color:black;
+}
+.ya_share2{
+	left:0px;
+	top:30px;
+	position:absolute;
+	height:30px;
+//	width:140px;
+//	background-color:blue;
+}
+.banner{
+	height:60px;
+}
+.mapContainer0{
+	position:absolute;
+	left:0px;	
+	top:0px;	
+	overflow:hidden;
+}
+.mapContainer1{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	overflow:hidden;
+}
+.horizontalDivider{
+	position:absolute;
+	width:20px;
+	height:100%;
+	cursor: e-resize;
+
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+}
+.verticalDivider{
+	position:absolute;
+	height:20px;
+	width:100%;
+	cursor: n-resize;
+
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+}
+
+.map0{
+	position:relative;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+}
+.map1{
+	position:relative;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+}
+.compass0{
+	cursor: pointer;
+	border-radius: 10px;
+	position:absolute;
+	bottom:28px;
+	left:10px;
+	z-index:2000;
+}
+.compass1{
+	cursor: pointer;
+	border-radius: 10px;
+	position:absolute;
+	bottom:28px;
+	left:10px;
+	z-index:2000;
+}
+.compassShow{
+	left:20px;
+}
+.handle0{
+	cursor: pointer;
+	border-radius: 3px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2000;
+	margin-top:40px;
+	margin-left:40px;
+	margin-right:10px;
+	margin-bottom:52px;
+	opacity:0.1;
+	filter:alpha(opacity=10);
+	-moz-opacity:0.1;
+}
+.handle0:hover{
+	opacity:1;
+	filter:alpha(opacity=100);
+	-moz-opacity:1;
+}
+.handle1{
+	cursor: pointer;
+	border-radius: 3px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2000;
+	margin-top:40px;
+	margin-left:10px;
+	margin-right:40px;
+	margin-bottom:52px;
+	opacity:0.1;
+	filter:alpha(opacity=10);
+	-moz-opacity:0.1;
+}
+.handle1:hover{
+	opacity:1;
+	filter:alpha(opacity=100);
+	-moz-opacity:1;
+}
+.handleShow{
+	left:110px;
+}
