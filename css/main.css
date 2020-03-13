@@ -68,7 +68,7 @@
 	left:0px;
 	height:60px;
 	width:320px;
-	//background-color:red;
+	background-color:red;
 }
 .banners{
 	position:absolute;
@@ -95,22 +95,22 @@
 	width:130px;
 	bottom:0px;
 	right:0px;
-	//background-color:yellow;
+	background-color:yellow;
 }
 .ya_share{
 	left:0px;
 	position:absolute;
 	height:30px;
-//	width:140px;
-//	background-color:black;
+	width:140px;
+	background-color:black;
 }
 .ya_share2{
 	left:0px;
 	top:30px;
 	position:absolute;
 	height:30px;
-//	width:140px;
-//	background-color:blue;
+	width:140px;
+	background-color:blue;
 }
 .banner{
 	height:60px;
@@ -132,6 +132,7 @@
 	width:20px;
 	height:100%;
 	cursor: e-resize;
+	background-color: blueviolet;
 
 	opacity:0.8;
 	filter:alpha(opacity=80);
@@ -142,6 +143,7 @@
 	height:20px;
 	width:100%;
 	cursor: n-resize;
+	background-color: cyan;
 
 	opacity:0.8;
 	filter:alpha(opacity=80);
