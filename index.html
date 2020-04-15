@@ -1,238 +1,243 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" lang="ru" content="2, две, карты, рядом, сравнить, сопоставить, больше, море, озеро, город">
+        <meta name="description" lang="ru" content="Сравните наглядно две карты. Ответьте на вопрос: Это как докуда?">
+        <meta name="keywords" lang="en-us" content="2, two, maps, side-by-side, match, compare, comparison, collation, bigger, sea, lake, city">
+        <meta name="description" lang="en-us" content="Compare visually geographical objects on two maps side-by-side.">
+        <title>Mapcher 2.0</title>
+        <script type="text/javascript" async="" src="js/watch.js"></script>
+        <script type="text/javascript">
+            let lang;
+            if (document.cookie.indexOf('l%3Dr') > -1) {
+                lang = 'ru';
+            }
+            else if (document.cookie.indexOf('l%3De') > -1) {
+                lang = 'en-us';
+            }
+            else {
+                if (location.hash.indexOf('l=r') > -1) {
+                    lang = 'ru';
+                }
+                else {
+                    lang = 'en-us';
+                }
+            }
+            let l10n;
+            if (lang === 'ru') {
+                l10n = {
+                    lang: 'ru',
+                    locale: 'ru-RU',
+                    keywords: '2, две, карты, рядом, сравнить, сопоставить, больше, море, озеро, город',
+                    description: 'Сравните наглядно две карты. Ответьте на вопрос: Это как докуда?',
+                    title: 'Mapcher 2.0',
+                    help: 'Помощь',
+                    language: 'Язык',
+                    layout: 'Расположение карт',
+                    russian: 'Русский  &#x2713;',
+                    english: 'English',
+                    horizontal: 'Горизонтально',
+                    vertical: 'Вертикально',
+                    reset: 'Сброс'
+                };
+            }
+            else {
+                l10n = {
+                    lang: 'en',
+                    locale: 'en-US',
+                    keywords: '2, two, maps, side-by-side, match, compare, comparison, collation, bigger, sea, lake, city',
+                    description: 'Compare visually geographical objects on two maps side-by-side.',
+                    title: 'Mapcher 2.0',
+                    help: 'Help',
+                    language: 'Language',
+                    layout: 'Layout',
+                    russian: 'Русский',
+                    english: 'English  &#x2713;',
+                    horizontal: 'Horizontal',
+                    vertical: 'Vertical',
+                    reset: 'Reset'
+                };
+            }
+        </script>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="keywords" lang="ru" content="2, две, карты, рядом, сравнить, сопоставить, больше, море, озеро, город">
-	<meta name="description" lang="ru" content="Сравните наглядно две карты. Ответьте на вопрос: Это как докуда?">
-	<meta name="keywords" lang="en-us"
-		content="2, two, maps, side-by-side, match, compare, comparison, collation, bigger, sea, lake, city">
-	<meta name="description" lang="en-us" content="Compare visualy geographical objects on two maps side-by-side.">
-	<title>Mapcher.tk (former Mapcher.com)</title>
-	<script type="text/javascript" async="" src="js/watch.js"></script>
-	<script language="JavaScript" type="text/javascript">
-		if (document.cookie.indexOf('l%3Dr') > -1) {
-			var lang = 'ru';
-		}
-		else if (document.cookie.indexOf('l%3De') > -1) {
-			var lang = 'en-us';
-		}
-		else {
-			if (location.hash.indexOf('l=r') > -1) {
-				var lang = 'ru';
-			}
-			else {
-				var lang = 'en-us';
-			};
+        <meta name="robots" content="all">
+        <meta name="author" content="Mapcher">
+        <meta name="copyright" content="Mapcher 2015-2020">
 
-		};
-		if (lang === 'ru') {
-			var l10n = {
-				lang: 'ru',
-				locale: 'ru-RU',
-				keywords: '2, две, карты, рядом, сравнить, сопоставить, больше, море, озеро, город',
-				description: 'Сравните наглядно две карты. Ответьте на вопрос: Это как докуда?',
-				title: 'Mapcher.tk (former Mapcher.com)',
-				help: 'Помощь',
-				language: 'Язык',
-				layout: 'Расположение карт',
-				russian: 'Русский  &#x2713;',
-				english: 'English',
-				horizontal: 'Горизонтально',
-				vertical: 'Вертикально',
-				reset: 'Сброс'
-			};
-		}
-		else {
-			var l10n = {
-				lang: 'en',
-				locale: 'en-US',
-				keywords: '2, two, maps, side-by-side, match, compare, comparison, collation, bigger, sea, lake, city',
-				description: 'Compare visualy geographical objects on two maps side-by-side.',
-				title: 'Mapcher.tk (former Mapcher.com) - the map matcher',
-				help: 'Help',
-				language: 'Language',
-				layout: 'Layout',
-				russian: 'Русский',
-				english: 'English  &#x2713;',
-				horizontal: 'Horizontal',
-				vertical: 'Vertical',
-				reset: 'Reset'
-			};
-		};
-	</script>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link href="css/main.css" rel="stylesheet">
 
-	<meta name="robots" content="all">
-	<meta name="author" content="Mapcher">
-	<meta name="copyright" content="Mapcher 2015-2020">
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.js" type="text/javascript"></script>
+        <script src="js/jquery-css-transform.js" type="text/javascript"></script>
+        <script src="js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            document.write("<script type='text/javascript' src='https://api-maps.yandex.ru/2.1.29/?lang=" + l10n.locale + "&amp;apikey=1b5c3f86-fe5f-4d38-bea4-d415aa100988'><\/script>");
+        </script>
+        <!--<script type="text/javascript" src="js/json.txt"></script>-->
+        <!--<script type="text/javascript" src="js/share.js" charset="utf-8"></script>-->
 
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1">
-	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link href="css/main.css" rel="stylesheet">
+        <script type="text/javascript" src="js/app.js"></script>
 
-	<script src="js/jquery.js" type="text/javascript"></script>
-	<script src="js/jquery-ui.js" type="text/javascript"></script>
-	<script src="js/jquery-css-transform.js" type="text/javascript"></script>
-	<script src="js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
-	<script src="js/jquery.cookie.js" type="text/javascript"></script>
-	<script language="JavaScript" type="text/javascript">
-		document.write("<script type='text/javascript' src='https://api-maps.yandex.ru/2.1.29/?lang=" + l10n.locale + "'><\/script>");
-	</script>
-	<script type="text/javascript" src="js/json.txt"></script>
-	<script type="text/javascript" src="js/share.js" charset="utf-8"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" async="" src="js/reformal.js"></script>
+        <script type="text/javascript" async="" src="js/reformal.js"></script>
+        <style type="text/css" media="screen">
+            #reformal_tab {
+                display: block;
+                font-size: 0;
+                background-color: transparent !important;
+                line-height: 0;
+                cursor: pointer;
+                z-index: 100001;
+                left: 10px;
+                position: fixed;
+                bottom: 0;
+                border: none;
+            }
+            #reformal_tab img {
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
 
-	<style type="text/css" media="screen">
-		#reformal_tab {
-			display: block;
-			font-size: 0;
-			background-color: transparent !important;
-			line-height: 0;
-			cursor: pointer;
-			z-index: 100001;
-			left: 10px;
-			position: fixed;
-			bottom: 0;
-			border: none;
-		}
+    <body>
+        <a id="reformal_tab" href="http://mapcher.reformal.ru/" onclick="Reformal.widgetOpen();return false;"
+                 onmouseover="Reformal.widgetPreload();" onmouseout="Reformal.widgetAbortPreload();">
+            <img src="img/feedback.png" alt="">
+        </a>
 
-		#reformal_tab img {
-			border: none;
-			padding: 0;
-			margin: 0;
-		}
-	</style>
-</head>
+        <div id="window" class="window">
+            <div id="maps" class="maps">
+                <div id="mapContainer0" class="mapContainer0">
+                    <div id="map0" class="map0"></div>
+                    <div id="handle0" class="handle0 handleShow ui-draggable ui-draggable-handle">
+                        <img src="img/handle.png">
+                    </div>
+                </div>
+                <div id="mapContainer1" class="mapContainer1">
+                    <div id="map1" class="map1"></div>
+                    <div id="handle1" class="handle1 handleShow ui-draggable ui-draggable-handle">
+                        <img src="img/handle.png">
+                    </div>
+                </div>
+                <div id="horizontalDivider" class="horizontalDivider"></div>
+                <div id="verticalDivider" class="verticalDivider"></div>
+            </div>
 
-<body><a id="reformal_tab" href="http://mapcher.reformal.ru/" onclick="Reformal.widgetOpen();return false;"
-		onmouseover="Reformal.widgetPreload();" onmouseout="Reformal.widgetAbortPreload();"><img
-			src="img/feedback.png" alt=""></a>
-	<div id="window" class="window">
-		<div id="maps" class="maps">
-			<div id="mapContainer0" class="mapContainer0" style="width: 150px; height: 100px;">
-				<div id="map0" class="map0" style="width: 111.803px; height: 111.803px;">
-				</div>
-				<div id="handle0" class="handle0 handleShow ui-draggable ui-draggable-handle"><img
-						src="img/handle.png">
-				</div>
-			</div>
-			<div id="mapContainer1" class="mapContainer1" style="width: 150px; height: 100px;">
-				<div id="map1" class="map1" style="width: 111.803px; height: 111.803px;">
-				</div>
-				<div id="handle1" class="handle1 handleShow ui-draggable ui-draggable-handle"><img
-						src="img/handle.png">
-				</div>
-			</div>
-			<div id="horizontalDivider" class="horizontalDivider" style="left: 40px;">
-			</div>
-			<div id="verticalDivider" class="verticalDivider" style="display: none;">
-			</div>
-		</div>
+            <div id="header" class="header">
+                <div id="logo" class="logo">
+                    <img src="img/logo100Mapcher.png" style="height:60px; float:left">
+                    <!--<div id="shares" class="shares">
+                        <div id="ya_share" class="ya_share"></div>
+                        <div id="ya_share2" class="ya_share2"></div>
+                    </div>-->
+                </div>
+                <div id="banners" class="banners"></div>
+            </div>
 
-		<div id="header" class="header">
-			<div id="logo" class="logo">
-				<img src="img/logo100Mapcher.png" style="height:60px; float:left">
-				<div id="shares" class="shares">
-					<div id="ya_share" class="ya_share"></div>
-					<div id="ya_share2" class="ya_share2"></div>
-				</div>
-			</div>
-			<div id="banners" class="banners"></div>
-		</div>
+            <div id="menu" class="menu">
+                <br>
+                <script>document.write(l10n.language);</script>
+                <br>
+                <span id="ru" class="ru menuOption"><img src="img/ru.png">
+                        <script>document.write(l10n.russian);</script>
+                </span>
+                <br>
+                <span id="en" class="en menuOption"><img src="img/en.png">
+                        <script>document.write(l10n.english);</script>
+                </span>
+                <br>
+                <br>
+                <script>document.write(l10n.layout);</script>
+                <br>
+                <span id="horizontal" class="horizontal menuOption">
+                    <img src="img/horizontal.png" alt="horizontal">
+                    <script>document.write(l10n.horizontal);</script>
+                </span>
+                <br>
+                <span id="vertical" class="vertical menuOption">
+                    <img src="img/vertical.png" alt="vertical">
+                    <script>document.write(l10n.vertical);</script>
+                </span>
+                <br>
+                <br>
+                <span id="reset" class="reset menuOption">
+                    <img src="img/reset.png" alt="reset">
+                    <script>document.write(l10n.reset);</script>
+                </span>
+                <br>
+                <span id="help" class="help menuOption">
+                    <script>document.write("<a href='" + l10n.locale.substr(0, 2) + "/index.html'> HELP </a>");</script>
+                    <a href="en/index.html">
+                        <img src="img/help.png" style="background-color:white">
+                        <script>document.write(l10n.help);</script>
+                    </a>
+                    <br>
+                </span>
+                <span id="mailto" class="mailto menuOption">
+                    <a href="mailto:mapcher.com@yandex.ru">e-mail: mapcher.com@yandex.ru</a>
+                </span>
 
-		<div id="menu" class="menu">
-			<br>
-			<script>document.write(l10n.language);</script>Language
-			<br>
-			<span id="ru" class="ru menuOption"><img src="img/ru.png">
-				<script>document.write(l10n.russian);</script>Русский</span>
-			<br>
-			<span id="en" class="en menuOption"><img src="img/en.png">
-				<script>document.write(l10n.english);</script>English ✓</span>
-			<br>
-			<br>
-			<script>document.write(l10n.layout);</script>Layout
-			<br>
-			<span id="horizontal" class="horizontal menuOption"><img
-					src="img/horizontal.png" alt="horizontal">
-				<script>document.write(l10n.horizontal);</script>Horizontal</span>
-			<br>
-			<span id="vertical" class="vertical menuOption"><img
-					src="img/vertical.png" alt="vertical">
-				<script>document.write(l10n.vertical);</script>Vertical</span>
-			<br>
-			<br>
-			<span id="reset" class="reset menuOption"><img src="img/reset.png"
-					alt="reset">
-				<script>document.write(l10n.reset);</script>Reset </span>
-			<br>
-			<span id="help" class="help menuOption">
-				<script>document.write("<a href='" + l10n.locale.substr(0, 2) + "'>");</script><a
-					href="http://mapcher.github.io/en"><img src="img/help.png"
-						style="background-color:white">
-					<script>document.write(l10n.help);</script>Help</a>
-				<br>
-				<span id="mailto" class="mailto menuOption"><a href="mailto:mapcher.com@yandex.ru">e-mail:
-						mapcher.com@yandex.ru</a></span>
-				<div id="metrica" class="metrica">
-					<!-- Yandex.Metrika counter -->
-					<script
-						type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter29210735 = new Ya.Metrika({ id: 29210735, clickmap: true, trackLinks: true, accurateTrackBounce: true, trackHash: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
-					<noscript>
-						<div><img src="//mc.yandex.ru/watch/29210735" style="position:absolute; left:-9999px;" alt="" />
-						</div>
-					</noscript><!-- /Yandex.Metrika counter -->
-				</div>
-			</span></div>
-	</div>
-	<script type="text/javascript">
-		var reformalOptions = {
-			project_id: 852979,
-			project_host: "mapcher.reformal.ru",
-			tab_orientation: "bottom-left",
-			tab_indent: "10px",
-			tab_image_url: "images/feedback.png",
-			tab_is_custom: true
-		};
+                <div id="metrica" class="metrica">
+                    <!-- Yandex.Metrika counter -->
+                    <script type="text/javascript">
+                        (function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter29210735 = new Ya.Metrika({ id: 29210735, clickmap: true, trackLinks: true, accurateTrackBounce: true, trackHash: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+                    </script>
+                    <noscript>
+                        <div>
+                            <img src="//mc.yandex.ru/watch/29210735" style="position:absolute; left:-9999px;" alt="" />
+                        </div>
+                    </noscript>
+                    <!-- /Yandex.Metrika counter -->
+                </div>
 
-		(function () {
-			var script = document.createElement('script');
-			script.type = 'text/javascript'; script.async = true;
-			script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
-			document.getElementsByTagName('head')[0].appendChild(script);
-		})();
-	</script><noscript><a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a><a
-			href="http://mapcher.reformal.ru">Oтзывы и предложения для Mapcher</a></noscript>
-	<script type="text/javascript">
-		reformal_wdg_domain = "mapcher";
-		reformal_wdg_mode = 0;
-		reformal_wdg_title = "Mapcher";
-		reformal_wdg_ltitle = "Leave feedback";
-		reformal_wdg_lfont = "Verdana, Geneva, sans-serif";
-		reformal_wdg_lsize = "11px";
-		reformal_wdg_color = "#FFA000";
-		reformal_wdg_bcolor = "#516683";
-		reformal_wdg_tcolor = "#FFFFFF";
-		reformal_wdg_align = "left";
-		reformal_wdg_waction = 0;
-		reformal_wdg_vcolor = "#9FCE54";
-		reformal_wdg_cmline = "#E0E0E0";
-		reformal_wdg_glcolor = "#105895";
-		reformal_wdg_tbcolor = "#FFFFFF";
-		reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
-	</script>
+            </div>
+        </div>
 
+        <script type="text/javascript">
+            const reformalOptions = {
+                project_id: 852979,
+                project_host: "mapcher.reformal.ru",
+                tab_orientation: "bottom-left",
+                tab_indent: "10px",
+                tab_image_url: "img/feedback.png",
+                tab_is_custom: true
+            };
+            (function () {
+                const script = document.createElement('script');
+                script.type = 'text/javascript'; script.async = true;
+                script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
+                document.getElementsByTagName('head')[0].appendChild(script);
+            })();
+        </script>
+        <noscript>
+            <a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a>
+            <a href="http://mapcher.reformal.ru">Oтзывы и предложения для Mapcher</a>
+        </noscript>
 
-	<div at-magnifier-wrapper="">
-		<div class="at-theme-light">
-			<div class="at-base notranslate" translate="no">
-				<div class="Z1-AJ" style="top: 0px; left: 0px;"></div>
-			</div>
-		</div>
-	</div>
-</body>
-
+        <script type="text/javascript">
+            reformal_wdg_domain = "mapcher";
+            reformal_wdg_mode = 0;
+            reformal_wdg_title = "Mapcher";
+            reformal_wdg_ltitle = "Leave feedback";
+            reformal_wdg_lfont = "Verdana, Geneva, sans-serif";
+            reformal_wdg_lsize = "11px";
+            reformal_wdg_color = "#FFA000";
+            reformal_wdg_bcolor = "#516683";
+            reformal_wdg_tcolor = "#FFFFFF";
+            reformal_wdg_align = "left";
+            reformal_wdg_waction = 0;
+            reformal_wdg_vcolor = "#9FCE54";
+            reformal_wdg_cmline = "#E0E0E0";
+            reformal_wdg_glcolor = "#105895";
+            reformal_wdg_tbcolor = "#FFFFFF";
+            reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
+        </script>
+    </body>
 </html>
