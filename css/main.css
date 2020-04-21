@@ -25,7 +25,6 @@
 	left:0px;
 	height:100%;
 	width:100%;
-	background-color: black;
 }
 .menu{	
 	position:fixed;
@@ -33,25 +32,21 @@
 	left:-200px;
 	width:200px;
 	top:0px;
-	color:white;	
-	background-color:black;
+	background-color: #e4b9c0;
 }
 .menuItem{
 	position:relative;
 	width:100%;
-	background-color: #66512c;
 }
 .menuOption{
 	position:relative;
 	cursor: pointer;
-	background-color: #e4b9b9;
 }
 .maps{
 	position:absolute;
 	width:100%;
 	top:60px;
 	bottom:0px;
-	background-color: #d58512;
 }
 .footer{
 	position:absolute;
@@ -59,7 +54,6 @@
 	left:0px;
 	width:100%;	
 	top:0px;
-	background-color: #363636;
 }
 .header{
 	position:absolute;
@@ -67,14 +61,12 @@
 	left:0px;
 	width:100%;	
 	top:0px;
-	background-color: darkcyan;
 }
 .logo{
 	position:absolute;
 	left:0px;
 	height:60px;
 	width:320px;
-	background-color:magenta;
 }
 .banners{
 	position:absolute;
@@ -82,21 +74,18 @@
 	right:0px;
 	height:60px;
 	overflow:hidden;
-	background-color: #ec971f;
 }
 .banner1{
 	position:absolute;
 	right:0px;
 	width:468px;
 	height:60px;
-	background-color: yellow;
 }
 .banner2{
 	position:absolute;
 	right:468px;
 	left:0px;
 	height:60px;
-	background-color: lightsalmon;
 }
 .shares{
 	position:absolute;
@@ -104,14 +93,12 @@
 	width:130px;
 	bottom:0px;
 	right:0px;
-	background-color:yellow;
 }
 .ya_share{
 	left:0px;
 	position:absolute;
 	height:30px;
 	width:140px;
-	background-color:black;
 }
 .ya_share2{
 	left:0px;
@@ -119,11 +106,9 @@
 	position:absolute;
 	height:30px;
 	width:140px;
-	background-color:blue;
 }
 .banner{
 	height:60px;
-	background-color: mediumblue;
 }
 .mapContainer0{
 	position:absolute;
@@ -132,7 +117,6 @@
 	width:50%;
 	height:100%;
 	overflow:hidden;
-	background-color: yellow;
 }
 .mapContainer1{
 	position:absolute;
@@ -141,7 +125,6 @@
 	width:50%;
 	height:100%;
 	overflow:hidden;
-	background-color: #d58512;
 }
 .map0{
 	position:relative;
@@ -149,7 +132,6 @@
 	left:0px;
 	height:100%;
 	width:100%;
-	background-color: #00b0ff;
 }
 .map1{
 	position:relative;
@@ -157,31 +139,40 @@
 	left:0px;
 	height:100%;
 	width:100%;
-	background-color: #2a6496;
 }
-
+.horizontalDivider:hover{
+	opacity:0.2;
+	filter:alpha(opacity=20);
+	-moz-opacity:0.2;
+}
 .horizontalDivider{
 	position:absolute;
 	left:50%;
 	width:20px;
 	height:100%;
 	cursor: e-resize;
-	background-color: blueviolet;
+	background-color: grey;
 
-	opacity:0.8;
-	filter:alpha(opacity=80);
-	-moz-opacity:0.8;
+	opacity:0;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+}
+.verticalDivider:hover{
+	opacity:0.2;
+	filter:alpha(opacity=20);
+	-moz-opacity:0.2;
 }
 .verticalDivider{
 	position:absolute;
 	height:20px;
 	width:100%;
 	cursor: n-resize;
-	background-color: cyan;
+	background-color: grey;
 	display: none;
-	opacity:0.8;
-	filter:alpha(opacity=80);
-	-moz-opacity:0.8;
+
+	opacity:0;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
 }
 
 
@@ -192,7 +183,6 @@
 	bottom:28px;
 	left:10px;
 	z-index:2000;
-	background-color: deeppink;
 }
 .compass1{
 	cursor: pointer;
@@ -201,11 +191,9 @@
 	bottom:28px;
 	left:10px;
 	z-index:2000;
-	background-color: lavender;
 }
 .compassShow{
 	left:20px;
-	background-color: darkred;
 }
 .handle0{
 	cursor: pointer;
@@ -221,7 +209,6 @@
 	opacity:0.1;
 	filter:alpha(opacity=10);
 	-moz-opacity:0.1;
-	background-color: mediumblue;
 }
 .handle0:hover{
 	opacity:1;
@@ -242,7 +229,6 @@
 	opacity:0.1;
 	filter:alpha(opacity=10);
 	-moz-opacity:0.1;
-	background-color: indianred;
 }
 .handle1:hover{
 	opacity:1;
@@ -251,5 +237,4 @@
 }
 .handleShow{
 	left:110px;
-	background-color: darkcyan;
 }
